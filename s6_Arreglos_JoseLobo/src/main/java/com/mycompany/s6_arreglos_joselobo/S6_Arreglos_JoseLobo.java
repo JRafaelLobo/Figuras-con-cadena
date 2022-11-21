@@ -181,8 +181,8 @@ public class S6_Arreglos_JoseLobo {
         char[] conversion = new char[x.length];
         int decision;
         do {
-            System.out.println("Desea conversion a mayuscula (1) o a minuscula (2)");
-            decision = leer.nextInt();
+
+            decision = Integer.parseInt(JOptionPane.showInputDialog("Desea conversion a mayuscula (1) o a minuscula (2)"));
         } while (decision > 2 || decision < 1);
         for (int i = 0; i < x.length; i++) {
             String temporal = "";
