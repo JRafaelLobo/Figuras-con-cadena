@@ -25,10 +25,10 @@ public class S6_Arreglos_JoseLobo {
             System.out.println("5-->Convertir");
             System.out.println("6-->Figuras");
             System.out.println("8-->Salir");
-            opcion = leer.nextInt();
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Su opcion"));
 
             System.out.println("Ingrese tamano de arreglo: ");
-            int tam = leer.nextInt();
+            int tam = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tamaño"));
             int[] numeros = new int[tam];
             numeros = lectura(tam);
 
@@ -78,7 +78,7 @@ public class S6_Arreglos_JoseLobo {
                     imprimirchar(resp2);
                 }//case 5
                 case 6 -> {
-                    
+
                     imprimir(numeros);
                     boolean test = pares(numeros);
                     if (test == true) {
@@ -98,13 +98,17 @@ public class S6_Arreglos_JoseLobo {
                         ventana.setVisible(true);
                         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     }
-                }//case 6
-                default -> {
 
+                }//case 6
+                case 7 -> {
+                    JOptionPane.showInputDialog(null, "Salir");
+                }//case 7
+                default -> {
+                    JOptionPane.showInputDialog(null, "Opcion Incorrecta");
                 }//default
             }//switch
             System.out.println();
-        } while (opcion != 8);
+        } while (opcion != 7);
     }//main
     //Recibe un entero y retorna un arreglo de enteros
 
